@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SoNguyenTo</title>
+
+</head>
+<body>
+<script>
+    let numbers = prompt('Khai báo số lượng số nguyên tố cần in ra');
+    let is_prime = true;
+    let N = 2;
+    let count = 1;
+    document.write(N++ + "<br>"); //Để N thành số lẻ, chi xét N là số nguyên tố lẻ
+
+    while (count<numbers) {
+        let M = N;
+        while (N < M) {
+            if (N % M === 0) {
+                is_prime = false;
+                break;
+            } else {
+                is_prime = true;
+            }
+            M++;
+        }
+        if (is_prime) {
+            document.write(N + "<br>");
+            count ++;
+            N += 2;
+        }
+        else {
+            N +=2;
+        }
+    }
+
+    
+
+    //Chúng ta cũng có thể bỏ qua việc kiểm tra trường hợp  N=2 bằng cách chỉ xét các số lẻ.
+
+</script>
+</body>
+</html>
